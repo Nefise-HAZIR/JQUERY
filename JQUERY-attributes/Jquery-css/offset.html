@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+     
+     
+    </style>
+</head>
+<body>
+    <p>this is a paragraph</p>
+    <button>return the offset coordinates of the p element</button>
+    <script>
+     $(document).ready(function () {
+         $("button").click(function () {
+             var x=$("p").offset();
+             alert("top"+ x.top +"left"+x.left);
+         })
+     })
+     
+    </script>
+</body>
+</html>

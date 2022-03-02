@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+     
+    </style>
+</head>
+<body>
+   <button>Add and remove prop</button>
+   <div></div>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function (){
+            var $x=$("div");
+            $x.prop("color","FF0000");
+            $x.append("the color prop has the fallowing value: "+$x.prop("color"));
+            $x.removeProp("color");
+            $x.append("<br>the color prop has the fallowing value: "+$x.prop("color"));
+        })
+    })
+    </script>
+</body>
+</html>

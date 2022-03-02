@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+   
+     
+    </style>
+</head>
+<body>
+    <p id="p1" style="background-color: cadetblue;">paragraph</p>
+    <p id="p2" style="background-color: aquamarine;">nefise</p>
+    <p id="p3" style="background-color: blue;">Hazır</p>
+    <button id="button1">tıkla</button>
+   <br><br><br><br>
+    <p class="p" style="background-color: cadetblue;">paragraph</p>
+    <p class="p" style="background-color: aquamarine;">nefise</p>
+    <p class="p" style="background-color: blue;">Hazır</p>
+    <button id="button2">tıkla</button>
+
+    <script>
+      $(document).ready(function () {
+          $("#button1").click(function () {
+              alert("the color value is:" +$("#p3").css("background-color"));
+              $("#p2").css({"background-color":"yellow"});
+          })
+      });
+      $(document).ready(function () {
+          $("#button2").click(function () {
+               $(".p").css({"background-color": "yellow","font-size":"25px"})
+          })
+      })
+    </script>
+</body>
+</html>

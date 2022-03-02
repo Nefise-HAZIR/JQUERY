@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+     
+     
+    </style>
+</head>
+<body>
+    <p>this is a paragraph</p>
+    <button>return the offset coordinates of the p element</button>
+    <script>
+     $(document).ready(function () {
+         $("button").click(function () {
+            newPos=new Object();
+            newPos.left="150"
+            newPos.top="100";
+            $("p").offset(newPos);
+            //  $("p").offset(function (n,c){
+            //      newPos=new Object();
+            //      newPos.left=c.left+200;
+            //      newPos.top=c.top+100;
+            //      return newPos;
+            //  })
+         })
+     })
+     // başka bir elementin kordinatını p elementine atamak istersek $("p").offset($("span").offset()) deriz
+    </script>
+</body>
+</html>

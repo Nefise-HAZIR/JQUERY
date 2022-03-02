@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        img{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+   <img id="1" src="3.jpg" alt="">
+   <button id="btn1">genişliği ve yüksekliği değiştir</button>
+   <img id="2" src="1.jpg" alt="">
+   <button id="btn2">genişliği ve yüksekliği değiştir</button>
+   <img id="3" src="2.jpg" height="500">
+   <button id="btn3">genişliği ve yüksekliği değiştir</button>
+   <img id="4" src="4.jpg" height="500">
+   <button id="btn4">genişliği ve yüksekliği değiştir</button>
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    
+    <script>
+       $(document).ready(function () {
+           $("#btn1").click(function(){
+               $("#1").attr({width:"150", height:"100"})
+           }); 
+       });
+       $(document).ready(function () {
+           $("#btn2").click(function (){
+               $("#2").attr("height","500");
+           })
+       });
+       $(document).ready(function () {
+           $("#btn3").click(function () {
+               $("#3").attr("height",function(n,v){
+                   return v-50;
+               });
+           });
+       });
+       $(document).ready(function () {
+           $("#btn4").click(function () {
+               alert("img genişliği: "+$("#4").attr("height"));
+               
+           });
+       });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <button>change title</button>
+    <input type="text"title="hello world">
+    <div id="log"></div>   
+    <script>
+      $(document).ready(function (){
+          var inputTitle=$("input").attr("title");
+          $("button").click(function(){
+              var input=$(this).next();
+              if(input.attr("title")===inputTitle){
+                  input.removeAttr("title");
+              }
+              else{
+                  input.attr("title",inputTitle);
+              }
+              $("#log").html("input title is now "+ input.attr("title"));
+          })
+      })
+   
+    </script>
+</body>
+</html>
